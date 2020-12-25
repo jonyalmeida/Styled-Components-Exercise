@@ -36,12 +36,10 @@ const GlobalStyle = createGlobalStyle`
 `;
 
 ReactDOM.render(
-    <ThemeProvider theme={theme1}>
-        <React.StrictMode>
-            <GlobalStyle />
-            <App />
-        </React.StrictMode>
-    </ThemeProvider>,
+    <React.StrictMode>
+        <GlobalStyle />
+        <App />
+    </React.StrictMode>,
     document.getElementById("root")
 );
 

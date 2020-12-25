@@ -9,4 +9,23 @@ const Select = styled.select`
     font-size: 1rem;
 
     border: 1px solid ${(props) => props.theme.light};
+    box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.1);
+    background: ${(props) => props.theme.light};
+    border-radius: 2px;
 `;
+
+export const SelectOpt = styled.option`
+    font-family: Roboto;
+    font-size: 1rem;
+`;
+
+export default function ThemeSelect({ handleThemeChange }) {
+    return (
+        <div>
+            <Select onChange={(e) => handleThemeChange(e)}>
+                <SelectOpt value='theme1'>Theme 1</SelectOpt>
+                <SelectOpt value='theme2'>Theme 2</SelectOpt>
+            </Select>
+        </div>
+    );
+}
