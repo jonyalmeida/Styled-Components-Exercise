@@ -27,7 +27,7 @@ const AppHeader = styled.div`
     background-color: #222;
     height: 12rem;
     padding: 1rem;
-    color: white;
+    color: ${(props) => props.theme.primary};
 `;
 
 const AppTitle = styled.h1`
